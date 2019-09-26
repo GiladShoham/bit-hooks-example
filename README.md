@@ -37,12 +37,12 @@ You can change it to what ever you want.
 
 ### Local running and development
 #### Setup the extension in the component workspace
-Add the following entry in the bit.json file:
+Add the following entry in the bit.json file (I already did it for you):
 ```json
 "extensions": {
         "my-extension": {
             "options": {
-                "file": "path to the component index file"
+                "file": "../extension-workspace/src/bit-hooks/index.js"
             }
         }
     }

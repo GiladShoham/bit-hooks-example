@@ -1,5 +1,12 @@
 {
     "env": {},
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "extensions": {
+        "my-extension": {
+            "options": {
+                "file": "../extension-workspace/src/bit-hooks/index.js"
+            }
+        }
+    }
 }
