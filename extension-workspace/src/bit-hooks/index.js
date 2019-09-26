@@ -14,14 +14,14 @@ const runPreTagHook = (args, headers) => {
   // Do whatever you want here
   const filePath = path.join(process.cwd, FILE_NAME);
   const data = `---------------------------------
-${Date.now()}
+${new Date(Date.now()).toLocaleString();}
 pre-tag was triggered with args
 ${args}
 ---------------------------------`
   if (!fs.existsSync(filePath)){
-    fs.writeFile
+    fs.writeFile(filePath, data);
   }
-  fs.appendFileSync
+  fs.appendFileSync(filePath, data);
 };
 
 module.exports = hooks;
