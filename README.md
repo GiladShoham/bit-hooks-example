@@ -9,7 +9,8 @@ A full list of the existing hook and more documentation can be found [here](http
 *disclaimer:*  
 *This API's of bit are working in progress and might break in the future, use it on your own risk.*
 
-## Project structure
+## Working with this project
+### Project structure
 ```
 .
 ├── README.md
@@ -22,3 +23,14 @@ A full list of the existing hook and more documentation can be found [here](http
         └── bit-hooks
             └── index.js
 ```
+This project contains two bit workspaces.
+1. component-workspace - represent your real workspace where your component lives in. It might be your app or a shared lib component workspace for example.
+2. extension-workspace - Contain the extension that perform the hooks registration and actions. 
+
+Both project are already initialized by bit.
+
+### Local development
+
+### Moving to production
+In order to really use this, you should export the extension component to a collection and install it as real extension in your workspace.
+You can see already exported version of this extension here - . You can just import it using `-x` flag in any workspace and see it in action.
