@@ -48,14 +48,22 @@ Add the following entry in the bit.json file:
     }
 ```
 Update the path to point to the index.file of the extension.
-#### Verify the extension is working
+
+#### Verify the extension loaded successfully
 Run `bit status` on the component workspace.
 Open [bit's logs](https://docs.bit.dev/docs/logs.html), you should see there something like:
-``
-##### verify extension loading
-Just run `bit tag my-comp` in the component workspace. 
-You should now see an events.log file in the root.
+`debug: base-extension loading my-extension`
+`info: registering preTagHook to hook pre-tag`
 
+##### verify extension running successfully
+Just run `bit tag my-comp` in the component workspace. 
+You should now see an events.log file in the root of the component workspace.
+In the logs you should see something like:
+`info: running action preTagHook on hook pre-tag`
+
+##### modify extension
+Change the extension to do what ever you want.
+To monitor errors from the extension code, it will be easiest to just check bit's logs.
 
 ### Moving to production
 In order to really use this, you should export the extension component to a collection and install it as real extension in your workspace.
